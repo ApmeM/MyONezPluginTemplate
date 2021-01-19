@@ -1,4 +1,4 @@
-#PluginTemplate
+PluginTemplate
 ==========
 PluginTemplate is a project structure template for MyONez plugin libraries
 
@@ -8,6 +8,14 @@ PluginTemplate is a project structure template for MyONez plugin libraries
 
 Just replace "PluginTemplate" everywhere (filenames and files content) and push to git.
 
-Once pushed build github action will try to build it agains ,net and bridge.net and run .net tests
+Once pushed github action will try to build it against .net and bridge.net and run dotnet tests
 
-To create a release add a tag v1.0.0 to git ad push it.
+To create a package add a tag v1.0.0 to git and push it.
+
+To add result package to your solution add new package source at
+
+    Tools -> Options -> NuGet Package Manager -> Package Sources.
+
+with source
+
+    https://nuget.pkg.github.com/username/index.json
